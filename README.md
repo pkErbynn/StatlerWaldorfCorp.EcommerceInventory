@@ -12,7 +12,7 @@ This setup allows services to dynamically discover and communicate with each oth
 
 ### Benefits:
 - Provides high availability of the service
-- Provides failover
+- Supports failover
 - Provides load balancing
 
 ### Library Used
@@ -75,6 +75,11 @@ builder.Services.AddControllers();
 ...
 ```
 *Why*: This sets up the necessary configurations and middleware for the Inventory Service, including integrating Steeltoe Discovery Client for Eureka.
+
+5. Run `dotnet run` and access
+```bash
+GET http://localhost:5290/api/SKUStatus/{123}
+```
 
 
 
