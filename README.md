@@ -22,7 +22,7 @@ This setup allows services to dynamically discover and communicate with each oth
 - Postman
 
 
-## Setting Up
+## Setup
 Demonstration of creating a resilient and discoverable microservices architecture using .NET 6, Steeltoe, and Eureka. 
 
 This setup allows services to dynamically discover and communicate with each other, enhancing scalability and resilience.
