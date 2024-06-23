@@ -33,7 +33,7 @@ This setup allows services to dynamically discover and communicate with each oth
 ```bash
 $ docker run -d --name eureka -p 8761:8761 netflixoss/eureka:1.1.147
 ```
-*Why*: Eureka server act as our service registry. It allows services to register themselves and discover other services dynamically.
+**Why**: Eureka server act as our service registry. It allows services to register themselves and discover other services dynamically.
 
 #### 2. Creating the Inventory Service
 1. Create the Web API project
