@@ -15,10 +15,12 @@ This setup allows services to dynamically discover and communicate with each oth
 - Supports failover
 - Provides load balancing
 
-### Library Used
+### Core Technologies Used
 - Steeltoe Discovery library
+- C# / .NET
+- Docker
+- Postman
 
-### Setting Up
 
 ## Setting Up
 Demonstration of creating a resilient and discoverable microservices architecture using .NET 6, Steeltoe, and Eureka. 
@@ -63,9 +65,9 @@ $ docker run -d --name eureka -p 8761:8761 netflixoss/eureka:1.1.147
   }
 }
 ```
-*Why*: This configuration specifies the Eureka server's URL and sets the application name, which Eureka uses to register and discover services.
+**Why**: This configuration specifies the Eureka server's URL and sets the application name, which Eureka uses to register and discover services.
 
-4. Configure the services and middleware in Program.cs:
+#### 4. Configure the services and middleware in Program.cs:
 
 ```bash
 ...
@@ -74,9 +76,9 @@ builder.Services.AddDiscoveryClient(builder.Configuration);
 builder.Services.AddControllers();
 ...
 ```
-*Why*: This sets up the necessary configurations and middleware for the Inventory Service, including integrating Steeltoe Discovery Client for Eureka.
+**Why**: This sets up the necessary configurations and middleware for the Inventory Service, including integrating Steeltoe Discovery Client for Eureka.
 
-5. Run `dotnet run` and access
+#### 5. Run `dotnet run` and access
 ```bash
 GET http://localhost:5290/api/SKUStatus/{123}
 ```
